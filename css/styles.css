@@ -205,6 +205,7 @@ ul {
 .hero-overlay.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .hero-overlay.is-hidden .hero-modal {
@@ -395,6 +396,8 @@ ul {
 .socials-item-link.personal {
   color: var(--svg-base-color);
   background-color: var(--white-color);
+  transition: color var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function);
 }
 
 .socials-item-link.personal:hover,
@@ -422,13 +425,13 @@ ul {
   border: 1px solid var(--svg-base-color);
   border-radius: 4px;
   transition: color var(--duration) var(--timing-function),
-    border var(--duration) var(--timing-function);
+    border-color var(--duration) var(--timing-function);
 }
 
 .clients-item-link:hover,
 .clients-item-link:focus {
   color: var(--active-link-color);
-  border: 1px solid var(--active-link-color);
+  border-color: var(--active-link-color);
 }
 
 .clients-item-icon {
@@ -506,8 +509,7 @@ ul {
   color: var(--white-color);
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color var(--duration) var(--timing-function),
-    color var(--duration) var(--timing-function);
+  transition: background-color var(--duration) var(--timing-function);
 }
 
 .socials-item-link:hover,
